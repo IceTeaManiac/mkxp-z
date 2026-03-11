@@ -66,7 +66,7 @@ jobs:
           cp ../mkxp-z.exe .
           cp ../../mkxp.json .
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: mkxp-z.windows.${{github.ref_name}}-${{steps.short-sha.outputs.sha}}
           path: |
@@ -119,7 +119,7 @@ jobs:
           cd ..
           zip -r local.zip local
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: mkxp-z.linux.${{github.ref_name}}-${{steps.short-sha.outputs.sha}}
           path: build/local.zip
@@ -169,7 +169,7 @@ jobs:
           ditto -c -k --sequesterRsrc --keepParent Z-universal.app Z-universal.app.zip
 
       - name: Upload archive
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mkxp-z.macos.${{github.ref_name}}-${{steps.short-sha.outputs.sha}}
           path: build/Build/Products/Release/Z-universal.app.zip
