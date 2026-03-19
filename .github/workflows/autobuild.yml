@@ -1,4 +1,4 @@
-# I have no idea what I'm doing
+# Trigger automatic build
 name: Automatic Build
 
 on:
